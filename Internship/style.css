@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 23, 2016, 3:08:37 PM
+    Author     : hanhttm
+*/
+
+header{
+    background-color: black;
+    color: whitesmoke;
+
+}
+.header-top{
+    padding-top: 5px;
+
+}
+.header-main.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #fff;
+}
+.header-main{
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    font-size: 16px;
+}
+.header-main a{
+
+}
+.item active image{
+    max-height: 80%;
+}
+.banner{
+    padding: 50px 0px 70px 0px;
+}
+/*.navbar {
+    min-height: 100px;
+}*/
+.navbar-brand > img {
+    display: block;
+    position: relative;
+    top: -20px;
+    left: 40px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #fff;
+    margin-top: 15px;
+    float: right;
+}
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+.main-content.fixed {
+    margin-top: 100px;
+}
+.main-content{
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+/*CSS cho slider*/
