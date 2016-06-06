@@ -23,6 +23,10 @@ header{
     left: 0;
     right: 0;
     z-index: 2;
+    opacity: 0.9;
+}
+.img.fixed{
+    max-width: 85%;
 }
 .container-fluid {
     padding-right: 15px;
@@ -78,4 +82,8 @@ header{
     position: relative;
     z-index: 1;
 }
+.search{
+    display: none;
+}
+
 /*CSS cho slider*/
