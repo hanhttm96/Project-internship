@@ -23,10 +23,10 @@ header{
     left: 0;
     right: 0;
     z-index: 2;
-    opacity: 0.9;
+    box-shadow:  0px 2px 5px #ccc9c9;
 }
 .img.fixed{
-    max-width: 85%;
+       max-width: 75%;
 }
 .container-fluid {
     padding-right: 15px;
@@ -40,6 +40,7 @@ header{
     z-index: 2;
     background: #fff;
     font-size: 16px;
+        border-top: 3px solid #000;
 }
 .header-main a{
 
@@ -56,13 +57,16 @@ header{
 .navbar-brand > img {
     display: block;
     position: relative;
-    top: -20px;
+    top: -35px;
     left: 40px;
+
+    max-width: 85%;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #fff;
+
+
     margin-top: 15px;
-    float: right;
 }
 .navbar-default {
     background-color: #fff;
@@ -70,7 +74,7 @@ header{
 }
 .navbar {
     position: relative;
-    min-height: 50px;
+    min-height: 4em;
     margin-bottom: 0px;
     border: 1px solid transparent;
 }
@@ -87,3 +91,56 @@ header{
 }
 
 /*CSS cho slider*/
+.dropdown.full-width {
+    position: static;
+}
+.dropdown.full-width .dropdown-menu {
+    height: 300px;
+    width: 100% !important;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+ .search{
+    display: none;
+    position: absolute;
+    width: 150px;
+    right: 12px;
+    top: 35px;
+ }
+ .image{
+    max-width: 40%;
+ }
+
+ .config.open {
+    left: 0;
+}
+.config {
+    position: fixed;
+    top: 145px;
+    left: -200px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    z-index: 999;
+}
+.config-options{
+    background: #fff;
+    position: fixed;
+    width: 150px;
+    height: 200px;
+    z-index: 100;
+    padding: 10px;
+    border: 1px solid black;
+}
+.show-options{
+    position: relative;
+    float: left;
+    padding: 10px;
+    font-size: 30px;
+    display: block;
+    background-color: #333;
+    color: #fff;
+    vertical-align: middle;
+    z-index: 200;
+}

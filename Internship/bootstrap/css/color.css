@@ -1,0 +1,41 @@
+body.green {
+  background: #88d66b;
+  color: white;
+}
+body.pink {
+  background: #e3a8f7;
+  color: white;
+}
+body.blue {
+  background: #7bd1ed;
+  color: white;
+}
+body.white {
+  background: #ffffff;
+  color: white;
+}
+h1 {
+  line-height: 1.25;
+  margin: 2em 0 0;
+}
+p {
+  margin: .5em 0;
+}
+#greencolor {
+  color: #88d66b;
+}
+#pinkcolor {
+  color: #e3a8f7;
+}
+#bluecolor {
+  color: #7bd1ed;
+}
+#whitecolor {
+  color: #ffffff;
+}
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
