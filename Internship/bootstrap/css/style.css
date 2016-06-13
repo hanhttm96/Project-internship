@@ -7,15 +7,25 @@ and open the template in the editor.
     Created on : May 23, 2016, 3:08:37 PM
     Author     : hanhttm
 */
+/*.header-top{
+    background: url("../image/header.png");
+    min-height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+.clip{
 
-header{
-    background-color: black;
-    color: whitesmoke;
+background: url("../image/banner-clip.gif");
+min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 .header-top{
-    padding-top: 5px;
-
+   
+    
 }
 .header-main.fixed {
     position: fixed;
@@ -24,6 +34,7 @@ header{
     right: 0;
     z-index: 2;
     box-shadow:  0px 2px 5px #ccc9c9;
+   /* border-top: 3px solid #000;*/
 }
 .img.fixed{
        max-width: 75%;
@@ -40,7 +51,6 @@ header{
     z-index: 2;
     background: #fff;
     font-size: 16px;
-        border-top: 3px solid #000;
 }
 .header-main a{
 
@@ -57,7 +67,7 @@ header{
 .navbar-brand > img {
     display: block;
     position: relative;
-    top: -35px;
+    top: -25px;
     left: 40px;
 
     max-width: 85%;
@@ -90,13 +100,13 @@ header{
     display: none;
 }
 
-/*CSS cho slider*/
 .dropdown.full-width {
     position: static;
 }
 .dropdown.full-width .dropdown-menu {
     height: 300px;
-    width: 100% !important;
+    margin: auto;
+    right: 0;
 }
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -109,38 +119,32 @@ header{
     right: 12px;
     top: 35px;
  }
- .image{
-    max-width: 40%;
- }
 
- .config.open {
-    left: 0;
+
+.image{
+    width: 100px;
+    height: 100px;
 }
-.config {
-    position: fixed;
-    top: 145px;
-    left: -200px;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    z-index: 999;
+.mega-col-inner > a {
+  color: #000;
 }
-.config-options{
-    background: #fff;
-    position: fixed;
-    width: 150px;
-    height: 200px;
-    z-index: 100;
-    padding: 10px;
-    border: 1px solid black;
+.mega-col-inner > ul li{
+    list-style-type: none;
 }
-.show-options{
-    position: relative;
-    float: left;
-    padding: 10px;
-    font-size: 30px;
-    display: block;
-    background-color: #333;
-    color: #fff;
-    vertical-align: middle;
-    z-index: 200;
+@media (min-width: 768px) {
+    .megamenu .dropdown-menu.container {
+        width: 750px !important;
+    }
 }
+@media (min-width: 992px) {
+    .megamenu .dropdown-menu.container {
+        width: 970px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .megamenu .dropdown-menu.container {
+        width: 1170px !important;
+    }
+}
+
