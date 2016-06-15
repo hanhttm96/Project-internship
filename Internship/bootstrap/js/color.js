@@ -14,34 +14,31 @@ $(function(){
             $('#greencolor').click(switchGreen);
             $('#pinkcolor').click(switchPink);
             $('#bluecolor').click(switchBlue);
-            $('#whitecolor').click(switchWhite);
+            $('#blackcolor').click(switchBlack);
 
             function switchGreen(event) {
               event.preventDefault();
-              $('body').attr('class', 'green');
               $('#CartCount').attr('class', 'badge-green');
               $('.header-main').attr('class', 'header-main fixed border-green');
             }
 
             function switchPink(event) {
               event.preventDefault();
-              $('body').attr('class', 'pink');
               $('#CartCount').attr('class', 'badge-pink');
               $('.header-main').attr('class', 'header-main fixed border-pink');
+           
             }
 
             function switchBlue(event) {
               event.preventDefault();
-              $('body').attr('class', 'blue');
               $('#CartCount').attr('class', 'badge-blue');
               $('.header-main').attr('class', 'header-main fixed border-blue');
-         
             }
-            function switchWhite(event) {
+            function switchBlack(event) {
               event.preventDefault();
-              $('body').attr('class', 'white');
               $('#CartCount').attr('class', 'badge-black');
               $('.header-main').attr('class', 'header-main fixed border-black');
+           
          
             }
 
