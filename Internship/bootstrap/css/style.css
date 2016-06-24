@@ -93,7 +93,6 @@
 	letter-spacing: 5px;
 	padding: 40px 30px 30px 34px;
 	position: relative;
-	color: #888;
 	outline: none;
 	-webkit-transition: color 0.2s linear;
 	transition: color 0.2s linear;
@@ -330,3 +329,21 @@
 	}
 }
 
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
