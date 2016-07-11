@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Learning Angularjs</title>
+	<link rel="stylesheet" href="">
+	
+</head>
+<body >
+<div ng-app="myModule">
+	<div ng-controller="myController">
+
+	Introduce myself: <input type="text" name="" ng-model="employee.FirstName">
+				<input type="text" name="" ng-model="employee.LastName">
+				<input type="text" name="" ng-model="employee.Gender">
+				<br>
+
+	Introduce myself: {{employee.FirstName}} 
+	{{employee.LastName}} - {{employee.Gender}}
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.js" type="text/javascript"></script>
+	<script src="ajax.js" type="text/javascript"></script>
+</body>
+</html>
