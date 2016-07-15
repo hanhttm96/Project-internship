@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="" ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular Greeting</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style type="text/css">
+		div {
+			padding: 10px;
+			border: solid 2px blue;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container" ng-controller="MyCtrl">
+		{{ text | makeUppercase }}
+		<p>{{ 1400956671914 | date: 'dd-MM-yyyy' }}</p>
+	</div>
+
+	<div ng-controller="stringCtrl" class="container">
+		<input ng-model="greeting" type="text"><br>
+		No filter: {{greeting}}<br>
+		Reverse: {{greeting|reverse}}<br>
+		Reverse + uppercase: {{greeting|reverse:true}}<br>
+		Reverse, filtered in controller: {{filteredGreeting}}<br>
+	</div>
+
+	<div class="container" ng-controller="namesCtrl">
+		<input ng-model="search" type="text"><br>
+		<table border="1" width="100%">
+			<tr>
+				<th ng-click="orderByMe('name')">Name</th>
+				<th ng-click="orderByMe('country')">Country</th>
+			</tr>
+			<tr ng-repeat="x in names | orderBy:myOrderBy | filter:search">
+				<td>{{x.name}}</td>
+				<td>{{x.country}}</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="container" ng-controller="employeesCtrl">
+		Limit: <input type="number" ng-model="limitRow"/>
+		<table class="table">
+			<tr>
+				<td>Id</td>
+				<td>Name</td>
+				<td>Date of Birth</td>
+				<td>Salary</td>
+				<td>Gender</td>
+				<td>Status</td>
+			</tr>
+			<tr ng-repeat="employee in employees | limitTo:limitRow">
+				<td>{{employee.id}}</td>
+				<td>{{employee.name | uppercase}}</td>
+				<td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
+				<td>{{employee.salary | currency:""}}</td>
+				<td>{{employee.gender | lowercase}}</td>
+				<td>{{employee.status | status}}</td>
+			</tr>
+		</table>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+
+		var app = angular.module("app", []);
+
+		app.controller('MyCtrl', ['$scope', function ($scope) {
+			$scope.text = 'nhan huynh';
+		}]);
+
+		/*
+		* Create filters
+		*/
+		app.filter('makeUppercase', function() {
+			return function(item) {
+				return item.toUpperCase();
+			}
+		});
+
+		app.filter('reverse', function() {
+
+			return function(input, uppercase) {
+
+				input = input || '';
+				var out = "";
+
+				for (var i = 0; i < input.length; i++) {
+					out = input.charAt(i) + out;
+				}
+
+				if (uppercase) {
+					out = out.toUpperCase();
+				}
+
+				return out;
+			}
+		});
+
+		app.filter('status', function() {
+			return function(input) {
+				return input?'Online':'Offline';
+			}
+		});
+
+		/*
+		* stringCtrl controller
+		*/
+		app.controller('FilterController', ['$scope', 'filterFilter', function($scope, filterFilter) {
+			$scope.array = [
+				{ name: 'Tobias' },
+				{ name: 'Jeff' },
+				{ name: 'Brian' },
+				{ name: 'Igor' },
+				{ name: 'James' },
+				{ name: 'Brad' }
+			];
+
+			$scope.filteredArray = filterFilter($scope.array, 'a');
+			console.log($scope.filteredArray);
+		}]);
+
+		/*
+		* stringCtrl controller
+		*/
+		app.controller('stringCtrl', ['$scope', 'reverseFilter', function($scope, reverseFilter) {
+			$scope.greeting = 'hello';
+			$scope.filteredGreeting = reverseFilter($scope.greeting);
+		}]);
+
+		/*
+		* namesCtrl controller
+		*/
+		app.controller('namesCtrl', ['$scope', function ($scope) {
+			$scope.names = [
+				{name:'Jani',country:'Norway'},
+				{name:'Carl',country:'Sweden'},
+				{name:'Margareth',country:'England'},
+				{name:'Hege',country:'Norway'},
+				{name:'Joe',country:'Denmark'},
+				{name:'Gustav',country:'Sweden'},
+				{name:'Birgit',country:'Denmark'},
+				{name:'Mary',country:'England'},
+				{name:'Kai',country:'Norway'}
+			];
+			
+			$scope.orderByMe = function(x) {
+				$scope.myOrderBy = x;
+			}
+		}]);
+
+		/*
+		* employeesCtrl controller
+		*/
+		app.controller('employeesCtrl', ['$scope', function ($scope) {
+			$scope.employees = [
+				{ id: 1, name: 'Hải', birthDate: new Date('12/3/1989'), salary: 15000000, gender: 'Male', status:true},
+				{ id: 2, name: 'Hoàng', birthDate: new Date('6/15/1990'), salary: 12000000, gender: 'Male', status: true },
+				{ id: 3, name: 'Long', birthDate: new Date('1/14/1992'), salary: 17000000, gender: 'Male', status: false },
+				{ id: 4, name: 'Trung', birthDate: new Date('12/3/1993'), salary: 12000000, gender: 'Male', status: true },
+				{ id: 5, name: 'Hương', birthDate: new Date('12/3/1995'), salary: 11000000, gender: 'Female', status: false },
+				{ id: 6, name: 'Thủy', birthDate: new Date('12/3/1988'), salary: 10000000, gender: 'Female', status: true }
+			];
+			$scope.limitRow = 3;
+		}]);
+	</script>
+</body>
+</html>

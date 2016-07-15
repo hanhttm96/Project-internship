@@ -157,3 +157,4 @@ jQuery(document).ready(function($){
               $('.regular1').slick();
             });
 });
+
