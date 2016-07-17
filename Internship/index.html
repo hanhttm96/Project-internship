@@ -100,7 +100,7 @@ and open the template in the editor.
                             </li>
                             <li>
                                 <a href="#" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-                                <input type="text" class="search form-control" placeholder="Tìm kiếm">
+                                <input ng-model="search" type="text" class="search form-control" placeholder="Tìm kiếm">
 
                             </li>
                             <li>
@@ -182,18 +182,18 @@ and open the template in the editor.
                     <div class="col-md-12">
                         <div id="mi-slider2" class="mi-slider">
                             <ul>
-                                <li ng-repeat="vay in vay_mi_sliders"><a href="detail.html"><img class="img-responsive" ng-src="{{vay.imageUrl}}" alt="img01"><h4>{{vay.vay}}<br>{{vay.price}}</h4></a></li>
+                                <li ng-repeat="vay in vay_mi_sliders | orderBy:myOrderBy | filterFunction:search"><a href="detail.html"><img class="img-responsive" ng-src="{{vay.imageUrl}}" alt="img01"><h4>{{vay.vay}}<br>{{vay.price}}</h4></a></li>
 
                             </ul>
                             <ul>
-                                <li ng-repeat="quan in quan_mi_sliders"><a href="detail.html"><img class="img-responsive" ng-src="{{quan.imageUrl}}" alt="img05"><h4>{{quan.quan}}<br>{{quan.price}}</h4></a></li>
+                                <li ng-repeat="quan in quan_mi_sliders | orderBy:myOrderBy | filterFunction:search"><a href="detail.html"><img class="img-responsive" ng-src="{{quan.imageUrl}}" alt="img05"><h4>{{quan.quan}}<br>{{quan.price}}</h4></a></li>
 
                             </ul>
                             <ul>
-                                <li ng-repeat="pk in pk_mi_sliders"><a href="detail.html"><img class="img-responsive" ng-src="{{pk.imageUrl}}" alt="img09"><h4>{{pk.pk}}<br>{{pk.price}}</h4></a></li>
+                                <li ng-repeat="pk in pk_mi_sliders | orderBy:myOrderBy | filterFunction:search"><| orderBy:myOrderBy | filterFunction:searcha href="detail.html"><img class="img-responsive" ng-src="{{pk.imageUrl}}" alt="img09"><h4>{{pk.pk}}<br>{{pk.price}}</h4></a></li>
                             </ul>
                             <ul>
-                                <li ng-repeat="giay in giay_mi_sliders"><a href="detail.html"><img class="img-responsive" ng-src="{{giay.imageUrl}}" alt="img12"><h4>{{giay.giay}}<br>{{giay.price}}</h4></a></li>
+                                <li ng-repeat="giay in giay_mi_sliders | orderBy:myOrderBy | filterFunction:search" ><a href="detail.html"><img class="img-responsive" ng-src="{{giay.imageUrl}}" alt="img12"><h4>{{giay.giay}}<br>{{giay.price}}</h4></a></li>
                             </ul>
                             <nav>
                                 <a href="#">Váy</a>
@@ -239,7 +239,7 @@ and open the template in the editor.
                         <div  class="col-md-3 col-sm-6 col-xs-6">
                             <h3>SẢN PHẨM ĐỘC ĐÁO</h3>
                             <hr>
-                            <div ng-repeat="t in top1" class="media">
+                            <div ng-repeat="t in top1 | orderBy:myOrderBy | filterFunction:search" class="media">
                                 <div class="media-left">
                                     <a href="#">
                                         <img class="media-object" ng-src="{{t.imageUrl}}"/>
@@ -254,7 +254,7 @@ and open the template in the editor.
                         <div class="col-md-3 col-sm-6 col-xs-6">
                             <h3>TOP ĐÁNH GIÁ</h3>
                             <hr>
-                            <div ng-repeat="t in top2" class="media">
+                            <div ng-repeat="t in top2 | orderBy:myOrderBy | filterFunction:search" class="media">
                                 <div  class="media-left">
                                     <img class="media-object" ng-src="{{t.imageUrl}}"/>
                                 </div>
@@ -267,7 +267,7 @@ and open the template in the editor.
                         <div class="col-md-3 col-sm-6 col-xs-6">
                             <h3>TOP XEM NHIỀU</h3>
                             <hr>
-                            <div ng-repeat="t in top3" class="media">
+                            <div ng-repeat="t in top3 | orderBy:myOrderBy | filterFunction:search" class="media">
                                 <div  class="media-left">
                                     <img class="media-object" ng-src="{{t.imageUrl}}"/>
                                 </div>
@@ -280,7 +280,7 @@ and open the template in the editor.
                         <div class="col-md-3 col-sm-6 col-xs-6">
                             <h3>BÁN CHẠY NHẤT</h3>
                             <hr>
-                             <div ng-repeat="t in top3" class="media">
+                             <div ng-repeat="t in top4 | orderBy:myOrderBy | filterFunction:search" class="media">
                                 <div  class="media-left">
                                     <img class="media-object" ng-src="{{t.imageUrl}}"/>
                                 </div>

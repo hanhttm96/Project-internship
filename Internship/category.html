@@ -216,7 +216,7 @@ and open the template in the editor.
                 </div>
                 <div class="content-category">
 
-                    <div ng-repeat="x in titles | orderBy:myOrderBy | filter:search" ng-click="orderByMe('title_product')" class="col-md-3 border ">
+                    <div ng-repeat="x in titles | orderBy:myOrderBy | filterFunction:search" ng-click="orderByMe('title_product')" class="col-md-3 border ">
                         <div  class="view_hover">
                             <img ng-src="{{x.imageUrl}}" class="img-responsive" alt="">
 
