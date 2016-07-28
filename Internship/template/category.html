@@ -96,7 +96,7 @@
                             <img ng-src="{{x.imageUrl}}" class="img-responsive" alt="">
 
                             <div class="quickview">
-                                <button type="button" class="quick-view btn btn-info btn-lg btn-outline" data-toggle="modal" data-target="#{{x.id}}"><i class="fa fa-eye"></i></button>
+                                <button id="{{x.id}}" type="button" class="quick-view btn btn-info btn-lg btn-outline" data-toggle="modal" data-target="#{{x.id}}"><i class="fa fa-eye"></i></button>
                                 <!-- Modal -->
 
                             </div>
@@ -105,14 +105,14 @@
                                     <div class="action">
                                         <form action="/cart/add" method="post" enctype="multipart/form-data" class="form-ajaxtocart" id="product-actions-1036138">
                                             <input type="hidden" name="id" value="1568530">
-                                            <a class="btn button ajax_addtocart" href="/collections/all/products/quan-vai-ong-suong-nine-west" title="Váy 1 vai Skinny Jeans - PC41">
+                                            <a class="btn button ajax_addtocart" href="#" title="Váy 1 vai Skinny Jeans - PC41">
                                                 <span class="select_options">Mua ngay</span>
                                             </a>
                                         </form> 
                                     </div> 
                                 </div>
                                 <div class="view_detail">
-                                    <a class="btn lnk_view" href="/collections/all/products/quan-vai-ong-suong-nine-west" title="View">
+                                    <a class="btn lnk_view" ui-sref="detail" title="View">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>

@@ -229,8 +229,7 @@ footer .container {
 }
 .category,
 .trademark,
-.menu,
-.product {
+.menu {
   border: 1px solid #efefef;
   padding: 10px;
 }
@@ -266,29 +265,29 @@ footer .container {
   opacity: 0.8;
 }
 .view_hover:hover .quickview {
-  display: block;
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  display: inline-block;
-  margin-left: -40px;
-  top: 35%;
-  margin-top: -40px;
-  border-radius: 100%;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-  z-index: 1;
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    left: 50%;
+    margin-left: -40px;
+    top: 35%;
+    margin-top: -40px;
+    border-radius: 100%;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    z-index: 1;
 }
 .view_hover:hover .quickview .quick-view {
-  display: block;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  line-height: 80px;
-  text-align: center;
-  background-color: #272727;
-  color: #d19b6b;
-  border-radius: 100%;
-  outline: none;
+    display: block;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    line-height: 80px;
+    text-align: center;
+    background-color: #272727;
+    color: #fff;
+    border-radius: 100%;
 }
 .view_hover:hover .quickview .btn-outline:hover,
 .view_hover:hover .quickview .btn-outline:focus,

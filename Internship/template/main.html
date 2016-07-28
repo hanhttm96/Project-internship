@@ -118,8 +118,7 @@
                         </a>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
-
+                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
                     </div>
                 </div>
             </div>
@@ -131,7 +130,7 @@
                         <img class="media-object" ng-src="{{t.imageUrl}}"/>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
+                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
 
                     </div>
                 </div>
@@ -144,7 +143,7 @@
                         <img class="media-object" ng-src="{{t.imageUrl}}"/>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
+                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
 
                     </div>
                 </div>
@@ -157,7 +156,7 @@
                         <img class="media-object" ng-src="{{t.imageUrl}}"/>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
+                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
 
                     </div>
                 </div>
@@ -168,8 +167,18 @@
         <hr>
         <div class="regular slider">
             <div ng-repeat="slider in regular_slider">
-                <a href="#"><img ng-src="{{slider.imageUrl}}" class="img-responsive"></a>
+                <img ng-src="{{slider.imageUrl}}" class="img-responsive">
             </div>
         </div>
         <hr>
     </div>
+<script>
+      	$(function() {
+
+                $( '#mi-slider' ).catslider();
+            });
+            $(function() {
+
+                $( '#mi-slider2' ).catslider();
+            });
+</script>

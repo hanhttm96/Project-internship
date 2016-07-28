@@ -159,8 +159,6 @@ fashionApp.config(function ($stateProvider, $urlRouterProvider) {
     });
 
 });
-
-
 fashionApp.controller("homeController", homeController);
 fashionApp.controller("categoryController", categoryController);
 fashionApp.controller("contactController", contactController);
@@ -187,7 +185,6 @@ function detailController($scope, $timeout) {
          $scope.activeTab= key;
      }
 }
-
 function categoryController($scope, $timeout,$rootScope) {
          $scope.products = products;
     $scope.trademarks = trademarks;
