@@ -1,0 +1,217 @@
+<style>
+    .username.ng-valid {
+        background-color: lightgreen;
+    }
+    .username.ng-dirty.ng-invalid-required {
+        background-color: red;
+    }
+    .username.ng-dirty.ng-invalid-minlength {
+        background-color: yellow;
+    }
+
+    .email.ng-valid {
+        background-color: lightgreen;
+    }
+    .email.ng-dirty.ng-invalid-required {
+        background-color: red;
+    }
+    .email.ng-dirty.ng-invalid-email {
+        background-color: yellow;
+    }
+
+    .password.ng-valid {
+        background-color: lightgreen;
+    }
+    .password.ng-dirty.ng-invalid-required {
+        background-color: red;
+    }
+    .password.ng-dirty.ng-invalid-minlength {
+        background-color: yellow;
+    }
+
+</style>
+<section class="header-main" ng-controller="menuCtrl">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="bootstrap/img/logo.png" alt="" class="img img-responsive"/></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav megamenu">
+
+                    <li><a ui-sref="home">TRANG CHỦ</a></li>
+                    <li class="dropdown full-width">
+                        <a ui-sref="category" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">HÀNG MỚI <span class="caret"></span></a>
+                        <div class="dropdown-sub dropdown-menu sub-apmegamenu-1 container" style="width:250px">
+                            <div class="dropdown-menu-inner container">
+                                <div class="row">
+                                    <div class="mega-col col-sm-6">
+                                        <div class="row">
+                                            <div ng-repeat="new in prod_new_left" class="col-sm-4">
+                                                <div class="caption">
+                                                    <a ui-sref="detail"><img ng-src="{{new .imageUrl}}" alt="..." class="img-responsive"></a>
+                                                    <a ui-sref="detail">{{new .title_prod}}</a>
+                                                    <p>{{new .price}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-col col-sm-6">
+                                        <div class="row">
+                                            <div ng-repeat="new in prod_new_right" class="col-sm-4">
+                                                <div class="caption">
+                                                    <a ui-sref="detail"><img ng-src="{{new .imageUrl}}" alt="..." class="img-responsive"></a>
+                                                    <a ui-sref="detail">{{new .title_prod}}</a>
+                                                    <p>{{new .price}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a ui-sref="category" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">SẢN PHẨM <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a ui-sref="category">QUẦN</a></li>
+                            <li><a ui-sref="category">ÁO</a></li>
+                            <li><a ui-sref="category">PHỤ KIỆN</a></li>
+                        </ul>
+                    </li>
+                    <li><a ui-sref="contact" >LIÊN HỆ</a></li>
+                    <li><a href="#">GIỚI THIỆU</a></li>
+                    <li class="dropdown ">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>TÀI KHOẢN <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <div class="form">
+                                <div class="row container">
+                                    <div class="col-md-12">
+                                        <div class="panel panel-login">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <a href="#" class="active" id="login-form-link">Login</a>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <a href="#" id="register-form-link">Register</a>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <form id="login-form" action="" method="post" role="form" style="display: block;">
+                                                            <div class="form-group">
+                                                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                                            </div>
+                                                            <div class="form-group text-center">
+                                                                <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                                                <label for="remember"> Remember Me</label>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6 col-sm-offset-3">
+                                                                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="text-center">
+                                                                            <a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <div ng-controller="AppController as ctrl">
+                                                            <form ng-submit="ctrl.submit()" name="myForm" id="register-form" style="display: none;">
+                                                                <input type="hidden" ng-model="ctrl.user.id" />
+                                                 
+                                                                <div class="form-group">
+                                                                    <input ng-model="ctrl.user.username" type="text" name="username" id="username" tabindex="1" class="username form-control input-sm" placeholder="Nhập tên ít nhất 2 ký tự" required ng-minlength="2">
+                                                                    <div class="has-error" ng-show="myForm.$dirty">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input ng-model="ctrl.user.email" type="email" name="email" id="email" tabindex="1" class="email form-control input-sm" placeholder="Địa chỉ Email" required>
+                                                                    <div class="has-error" ng-show="myForm.$dirty">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input ng-model="ctrl.user.password" type="password" name="password" id="password" tabindex="2" class="password form-control input-sm" placeholder="Nhập mật khẩu ít nhất 5 ký tự" required ng-minlength="5">
+                                                                    <div class="has-error" ng-show="myForm.$dirty">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="form-actions floatRight">
+                                                                            <div class="col-md-6">
+                                                                                <input type="submit"  value="{{!ctrl.user.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Reset Form</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" ng-click="open_search()" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                        <input ng-if="openSearch" ng-model="search" ng-change="checkFilter(search)" type="text" class="search form-control" placeholder="Tìm kiếm">
+
+                    </li>
+                    <li>
+                        <a href="#" id="cart"><span class="fa fa-cart-plus "></span><span id="CartCount" class="badge">0</span></a>
+
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</section>
+
+<script>
+            $(function() {
+
+            $('#login-form-link').click(function(e) {
+            $("#login-form").delay(100).fadeIn(100);
+                    $("#register-form").fadeOut(100);
+                    $('#register-form-link').removeClass('active');
+                    $(this).addClass('active');
+                    e.preventDefault();
+            });
+                    $('#register-form-link').click(function(e) {
+            $("#register-form").delay(100).fadeIn(100);
+                    $("#login-form").fadeOut(100);
+                    $('#login-form-link').removeClass('active');
+                    $(this).addClass('active');
+                    e.preventDefault();
+            });
+            });
+</script>

@@ -10,12 +10,12 @@ Primary style
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+/*  font-size: 62.5%; */}
 
 body {
-  font-size: 1.6rem;
+/*  font-size: 1.6rem;
   color: #262626;
-  background-color: #f5f4f3;
+  background-color: #f5f4f3;*/
   font-family: 'Lato', sans-serif !important;
 
    }
@@ -24,30 +24,14 @@ body {
 a {
   text-decoration: none; }
 
-img {
-  max-width: 100%; }
+/*img {
+  max-width: 100%; }*/
 
 /* -------------------------------- 
 
 Main Components 
 
 -------------------------------- */
-header {
-  height: 170px;
-  line-height: 170px;
-  text-align: center;
-  background: #513e5d;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-  header h1 {
-    font-size: 2rem;
-    color: #ffffff; }
-  @media only screen and (min-width: 768px) {
-    header {
-      height: 200px;
-      line-height: 200px; }
-      header h1 {
-        font-size: 2.6rem; } }
 
 .cd-single-item {
   position: relative;
@@ -284,7 +268,7 @@ header {
     font-weight: bold; }
   .cd-item-info p {
     line-height: 1.6;
-    margin: 1em 0;
+    margin:0;
     color: #666666; }
   .cd-item-info .add-to-cart {
     -webkit-appearance: none;
@@ -359,7 +343,7 @@ input#quantity {
         -ms-transform: scale(1.3,1.3);
 }
 .cd-item-info{
-  line-height: 50px;
+  line-height: 40px;
 }
 footer, .tab-content{
   line-height: 20px;

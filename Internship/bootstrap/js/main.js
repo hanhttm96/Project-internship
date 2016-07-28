@@ -126,15 +126,15 @@ jQuery(document).ready(function($){
                         $('.img').removeClass('fixed');
                     }
                 });
-                $(function () {
-                    var isAction = !isAction;
-                    $('#search').click(function (e) {
-                        // todo
-                        e.preventDefault();
-                        isAction = !isAction;
-                        $('input').toggle("slow");
-                    });
-                });
+//                $(function () {
+//                    var isAction = !isAction;
+//                    $('#search').click(function (e) {
+//                        // todo
+//                        e.preventDefault();
+//                        isAction = !isAction;
+//                        $('input').toggle("slow");
+//                    });
+//                });
 
             });
 	$(function() {

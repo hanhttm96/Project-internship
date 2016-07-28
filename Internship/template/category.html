@@ -1,0 +1,152 @@
+
+            <div class="col-md-3">
+                <div class="caegory-wapper">
+                    <h4>Danh mục sản phẩm</h4>
+                    <div class="category">
+
+                        <a ui-sref="category">Sản phẩm mới nhập<span class="badge">20</span></a>
+                        <p>--------------------------------------------</p>
+                        <a ui-sref="category">Sản phẩm nổi bật<span class="badge">20</span></a>
+                        <p>--------------------------------------------</p>
+                        <a ui-sref="category">Sản phẩm khuyến mãi<span class="badge">20</span></a>
+                    </div>
+                </div>
+                <div class="trademark-wapper">
+                    <h4>Thương hiệu</h4>
+                    <div class="trademark">
+                        <a href="#" ng-repeat="trademark in trademarks">{{trademark.name}}<br><br></a>
+                    </div>
+                </div>
+                <div class="product-wapper">
+                    <h4>Loại sản phẩm</h4>
+                    <div class="product">
+                        <a ui-sref="category" ng-repeat="product in products">{{product.prod}}<br><br></a>
+
+                    </div>
+                </div>
+                <div class="menu-wapper">
+                    <h4>Mục lục</h4>
+                    <div class="menu">
+                        <div class="size">
+                            <p>Kích cỡ</p>
+                            <div class="col-md-6">
+                                <label><input type="checkbox" value=""> X</label><br>
+                                <label><input type="checkbox" value=""> L</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label><input type="checkbox" value=""> S</label><br>
+                                <label><input type="checkbox" value=""> XL</label>
+                            </div>
+                        </div>
+                        <div class="clear" ></div>
+                        <div class="price">
+                            <p>Giá</p>
+                            <label ng-repeat="p in prices"><input type="checkbox" value="">{{p.level}}</label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="product-hot">
+                    <h4>Bán chạy nhất</h4>
+                    <div class="product">
+                        <div class="media">
+                            <div class="media-left">
+                                <a ui-sref="detail">
+                                    <img class="media-object" src="bootstrap/img/sp4.jpeg" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">690.000₫</h4>
+
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a ui-sref="detail">
+                                    <img class="media-object" src="bootstrap/img/sp1.jpeg" onmouseover="this.src = 'bootstrap/img/hover-sp1.jpeg'" onmouseout="this.src = 'bootstrap/img/sp1.jpeg'" width="" height=""/>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">10.900.000₫</h4>
+
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a ui-sref="detail">
+                                    <img class="media-object" src="bootstrap/img/sp2.jpeg" onmouseover="this.src = 'bootstrap/img/hover-sp2.jpeg'" onmouseout="this.src = 'bootstrap/img/sp2.jpeg'" width="" height=""/>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">740.000₫</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9" >
+                <div class="banner">
+                    <a href="#"><img src="bootstrap/img/banner-main.jpg" class="img-responsive" alt=""></a>
+                </div>
+                <div class="content-category">
+
+                    <div ng-repeat="x in titles | orderBy:myOrderBy | filterFunction:test" ng-click="orderByMe('title_product')" class="col-md-3 border ">
+                        <div  class="view_hover">
+                            <img ng-src="{{x.imageUrl}}" class="img-responsive" alt="">
+
+                            <div class="quickview">
+                                <button type="button" class="quick-view btn btn-info btn-lg btn-outline" data-toggle="modal" data-target="#{{x.id}}"><i class="fa fa-eye"></i></button>
+                                <!-- Modal -->
+
+                            </div>
+                            <div class="functional-buttons clearfix">
+                                <div class="cart">
+                                    <div class="action">
+                                        <form action="/cart/add" method="post" enctype="multipart/form-data" class="form-ajaxtocart" id="product-actions-1036138">
+                                            <input type="hidden" name="id" value="1568530">
+                                            <a class="btn button ajax_addtocart" href="/collections/all/products/quan-vai-ong-suong-nine-west" title="Váy 1 vai Skinny Jeans - PC41">
+                                                <span class="select_options">Mua ngay</span>
+                                            </a>
+                                        </form> 
+                                    </div> 
+                                </div>
+                                <div class="view_detail">
+                                    <a class="btn lnk_view" href="/collections/all/products/quan-vai-ong-suong-nine-west" title="View">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    <div>  
+                        <p><a ui-sref="detail">{{x.title_product}}</a></p>
+                        <p>{{x.price}}</p>
+                    </div>
+                </div> 
+                </div>
+               
+            </div>
+            <div class="row next">
+                <nav>
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+      

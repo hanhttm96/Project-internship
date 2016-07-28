@@ -93,9 +93,6 @@ nav ul li {
   position: relative;
   /*z-index: 1000;*/
 }
-.search {
-  display: none;
-}
 .dropdown.full-width {
   position: static;
 }
@@ -108,8 +105,10 @@ nav ul li {
   display: block;
   margin-top: -10px;
 }
+.form .container{
+    width: 300px;
+}
 .search {
-  display: none;
   position: absolute;
   width: 150px;
   right: 12px;
@@ -230,7 +229,6 @@ footer .container {
 }
 .category,
 .trademark,
-.product,
 .menu,
 .product {
   border: 1px solid #efefef;
@@ -273,7 +271,6 @@ footer .container {
   width: 80px;
   height: 80px;
   display: inline-block;
-  left: 50%;
   margin-left: -40px;
   top: 35%;
   margin-top: -40px;
@@ -289,28 +286,28 @@ footer .container {
   line-height: 80px;
   text-align: center;
   background-color: #272727;
-  color: #fff;
+  color: #d19b6b;
   border-radius: 100%;
+  outline: none;
 }
 .view_hover:hover .quickview .btn-outline:hover,
 .view_hover:hover .quickview .btn-outline:focus,
 .view_hover:hover .quickview .btn-outline:active,
 .view_hover:hover .quickview .btn-outline.active {
   color: #272727;
-  background-color: #fff;
+  background-color: #d19b6b;
   border-color: #272727;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .view_hover:hover .functional-buttons {
   display: block;
-  margin: 5px 0px 0px;
   width: 100%;
-  top: 145px;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   position: absolute;
-  bottom: 0;
+  top: 0;
+  padding-top: 145px;
   left: 0;
   z-index: 1;
 }
@@ -403,4 +400,28 @@ footer .container {
 }
 a.ng-binding {
   text-transform: capitalize;
+}
+.demo {
+  transition: all linear 0.5s;
+  background-color: lightblue;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.ng-hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top: -200px;
+  left: 200px;
+}
+.dropdown-menu>li>a {
+    display: inline;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
 }

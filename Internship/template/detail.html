@@ -1,0 +1,179 @@
+
+        <section class="cd-single-item container">
+            <div class="cd-slider-wrapper">
+                <ul class="cd-slider">
+                    <li class="selected"><img src="bootstrap/img/hover-sp3.jpeg" alt="Product Image 1"></li>
+                    <li><img src="bootstrap/img/sp3.jpeg" alt="Product Image 1"></li>
+                    <li><img src="bootstrap/img/detail-sp3.jpeg" alt="Product Image 2"></li>
+                </ul> <!-- cd-slider -->
+
+                <ul class="cd-slider-navigation">
+                    <li><a href="#0" class="cd-prev inactive">Next</a></li>
+                    <li><a href="#0" class="cd-next">Prev</a></li>
+                </ul> <!-- cd-slider-navigation -->
+
+                <a href="#0" class="cd-close">Close</a>
+            </div> <!-- cd-slider-wrapper -->
+
+            <div class="cd-item-info">
+                <h2>VÁY SKINNY TÚI VIỀN DA</h2>
+                <div class="icon-social">
+                    <div class="fb-like" data-href="https://www.facebook.com/chau.xinh/?fref=ts" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>               
+                    <br>
+                    <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+                </div>
+
+                <p>Thiết kế nổi bật với túi viền da, kiểu dáng ôm sát, khoe đường cong và đôi chân thon dài Thiết kế nổi bật với túi viền...</p>
+                <div class="re-product">
+                    <p>Còn hàng</p>
+                </div>
+                <h3>Giá: 1.200.200₫</h3>
+                <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-form">
+                    <div class="selector-wrapper"><label for="product-selectors-option-0">Màu sắc</label><select class="single-option-selector" data-option="option1" id="product-selectors-option-0">
+                            <option value="Đen">Đen</option>
+                            <option value="Hồng">Hồng</option>
+                            <option value="Nâu">Nâu</option></select></div>
+                    <div class="selector-wrapper"><label for="product-selectors-option-1">Kích thước</label>
+                        <select class="single-option-selector" data-option="option2" id="product-selectors-option-1"><option value="X">X</option></select></div><select id="product-selectors" name="variantId" style="display:none">
+                        <option selected="selected" value="1568557">Đen / X - 5.200.000₫</option>
+                        <option value="1568558">Hồng / M - 5.200.000₫</option>
+                        <option value="1568559">Nâu / S - 5.200.000₫</option>
+                        <option value="1805420">Hồng / XL - 5.200.000₫</option>
+                    </select>
+                    <ul>
+                        <li><label for="product-selectors-option-0">Số lượng: </label></li>
+                        <li><input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small"></li>
+                    </ul>
+                    <button class="btn add_to_cart_detail ajax_addtocart btn-outline" title="Thêm vào giỏ hàng"><span><i class="icon-basket"></i> Thêm vào giỏ hàng</span></button>
+                    <div class="clearfix"></div>
+                </form>
+
+            </div>
+            <div class="option col-md-12">
+                <h3>THÔNG TIN</h3>
+                <hr>
+                <ul class="nav nav-tabs">
+                    <li ng-class="{'active': activeTab == 1}"><a data-toggle="tab" href="javascipt:void(0)" ng-click="changeData(1)">Giới thiệu</a></li>
+                    <li ng-class="{'active': activeTab == 2}"><a data-toggle="tab" href="javascipt:void(0)" ng-click="changeData(2)">Chính sách vận chuyển</a></li>
+                    <li ng-class="{'active': activeTab == 3}"><a data-toggle="tab" href="javascipt:void(0)" ng-click="changeData(3)">Nhận xét</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div  class="tab-pane fade " ng-class="{'active': activeTab == 1}">
+                        <br>
+                        <p ng-repeat="info in infomation_prods">{{info.gioi_thieu}}<br></p>
+                    </div>
+                    <div class="tab-pane fade" ng-class="{'active': activeTab == 2}">
+                        <br>
+                        <p ng-repeat="policy in policys">{{policy.dieu}}<br></p>
+
+                    </div>
+                    <div  class="tab-pane fade" ng-class="{'active': activeTab == 3}">
+                        <div class="fb-comments" data-href="https://www.facebook.com/chau.xinh/?fref=ts" data-width="100%" data-numposts="5"></div>  
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="row">
+                <div class="detail_product">
+                    <div  class="col-md-3 col-sm-6 col-xs-12">
+                        <h3>SẢN PHẨM ĐỘC ĐÁO</h3>
+                        <hr>
+                        <div ng-repeat="t in detail.top1" class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" ng-src="{{t.imageUrl}}"/>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h3>TOP ĐÁNH GIÁ</h3>
+                        <hr>
+                        <div ng-repeat="t in detail.top2" class="media">
+                            <div  class="media-left">
+                                <img class="media-object" ng-src="{{t.imageUrl}}"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h3>TOP XEM NHIỀU</h3>
+                        <hr>
+                        <div ng-repeat="t in detail.top3" class="media">
+                            <div  class="media-left">
+                                <img class="media-object" ng-src="{{t.imageUrl}}"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h3>BÁN CHẠY NHẤT</h3>
+                        <hr>
+                        <div ng-repeat="t in detail.top4" class="media">
+                            <div  class="media-left">
+                                <img class="media-object" ng-src="{{t.imageUrl}}"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">{{t.title_product}}</a></h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- cd-single-item -->
+
+      
+
+        <script>
+                    window.fbAsyncInit = function () {
+                        FB.init({
+                            appId: '153016271787623',
+                            xfbml: true,
+                            version: 'v2.7'
+                        });
+                    };
+
+                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) {
+                            return;
+                        }
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id))
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.7&appId=153016271787623";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+        <div id="fb-root"></div>
+        <script src="https://apis.google.com/js/platform.js" async defer>
+                    {
+                        lang: 'vi'
+                    }
+        </script>
+
+
+        
+    
