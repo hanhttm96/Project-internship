@@ -1,184 +1,185 @@
 
-    <div class="clip">
+<div class="clip">
+</div>
+<div class="row banner">
+    <div class="col-sm-6 ">
+        <a ui-sref="category" ><img src="bootstrap/img/banner1.jpg" alt="" class="img-responsive"/></a> 
     </div>
-    <div class="row banner">
-        <div class="col-sm-6 ">
-            <a href="#" ><img src="bootstrap/img/banner1.jpg" alt="" class="img-responsive"/></a> 
-        </div>
-        <div class="col-sm-6 ">
-            <a href="#" ><img  src="bootstrap/img/banner2.jpg" alt="" class="img-responsive"/></a>
-        </div>
+    <div class="col-sm-6 ">
+        <a ui-sref="category" ><img  src="bootstrap/img/banner2.jpg" alt="" class="img-responsive"/></a>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <center>
-                <p><strong>SẢN PHẨM</strong></P>
-                <H3><strong>--- HÀNG MỚI NHẬP ---</strong></H3>
-            </center>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <center>
+            <p><strong>SẢN PHẨM</strong></P>
+            <H3><strong>--- HÀNG MỚI NHẬP ---</strong></H3>
+        </center>
 
-        </div>
-        <div class="col-md-12">
-            <div id="mi-slider" class="mi-slider">
-                <ul>
-                    <li ng-repeat="vay in vay_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{vay.imageUrl}}" alt="img01"><h4>{{vay.vay}}<br>{{vay.price}}</h4></a></li>
+    </div>
+    <div class="col-md-12">
+        <div id="mi-slider" class="mi-slider">
+            <ul>
+                <li ng-repeat="vay in vay_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{vay.imageUrl}}" alt="img01"><h4>{{vay.vay}}<br>{{vay.price}}</h4></a></li>
 
-                </ul>
-                <ul>
-                    <li ng-repeat="quan in quan_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{quan.imageUrl}}" alt="img05"><h4>{{quan.quan}}<br>{{quan.price}}</h4></a></li>
+            </ul>
+            <ul>
+                <li ng-repeat="quan in quan_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{quan.imageUrl}}" alt="img05"><h4>{{quan.quan}}<br>{{quan.price}}</h4></a></li>
 
-                </ul>
-                <ul>
-                    <li ng-repeat="pk in pk_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{pk.imageUrl}}" alt="img09"><h4>{{pk.pk}}<br>{{pk.price}}</h4></a></li>
-                </ul>
-                <ul>
-                    <li ng-repeat="giay in giay_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{giay.imageUrl}}" alt="img12"><h4>{{giay.giay}}<br>{{giay.price}}</h4></a></li>
-                </ul>
-                <nav>
-                    <a href="#">Váy</a>
-                    <a href="#">Quần</a>
-                    <a href="#">Phụ kiện</a>
-                    <a href="#">Giày</a>
-                </nav>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <a href="#" ><img class="img-responsive" src="bootstrap/img/banner3.jpg" alt=""></a>
-        </div>
-        <div class="col-sm-12">
-            <center>
-                <p><strong>SẢN PHẨM</strong></P>
-                <H3><strong>--- SẢN PHẨM NỔI BẬT ---</strong></H3>
-            </center>
-
-        </div>
-        <div class="col-md-12">
-            <div id="mi-slider2" class="mi-slider">
-                <ul>
-                    <li ng-repeat="vay in vay_mi_sliders "><a ui-sref="detail"><img class="img-responsive" ng-src="{{vay.imageUrl}}" alt="img01"><h4>{{vay.vay}}<br>{{vay.price}}</h4></a></li>
-
-                </ul>
-                <ul>
-                    <li ng-repeat="quan in quan_mi_sliders "><a ui-sref="detail"><img class="img-responsive" ng-src="{{quan.imageUrl}}" alt="img05"><h4>{{quan.quan}}<br>{{quan.price}}</h4></a></li>
-
-                </ul>
-                <ul>
-                    <li ng-repeat="pk in pk_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{pk.imageUrl}}" alt="img09"><h4>{{pk.pk}}<br>{{pk.price}}</h4></a></li>
-                </ul>
-                <ul>
-                    <li ng-repeat="giay in giay_mi_sliders" ><a ui-sref="detail"><img class="img-responsive" ng-src="{{giay.imageUrl}}" alt="img12"><h4>{{giay.giay}}<br>{{giay.price}}</h4></a></li>
-                </ul>
-                <nav>
-                    <a href="#">Váy</a>
-                    <a href="#">Quần</a>
-                    <a href="#">Phụ kiện</a>
-                    <a href="#">Giày</a>
-                </nav>
-            </div>
+            </ul>
+            <ul>
+                <li ng-repeat="pk in pk_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{pk.imageUrl}}" alt="img09"><h4>{{pk.pk}}<br>{{pk.price}}</h4></a></li>
+            </ul>
+            <ul>
+                <li ng-repeat="giay in giay_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{giay.imageUrl}}" alt="img12"><h4>{{giay.giay}}<br>{{giay.price}}</h4></a></li>
+            </ul>
+            <nav>
+                <a href="#">Váy</a>
+                <a href="#">Quần</a>
+                <a href="#">Phụ kiện</a>
+                <a href="#">Giày</a>
+            </nav>
         </div>
     </div>
-    <div class="row">
-        <div class="slider-intro">
-            <div class="regular1 slider">
-                <div>
-                    <i class="fa fa-quote-left fa-2x"></i>
-                    <br>
-                    <br>
-                    <p>Chúng tôi luôn cập nhật những xu hướng thời trang phong cách nhất từ những hãng thời trang cao cấp như Lime Orange hoặc Alachic, những đôi giày nổi tiếng mà giá cả phải chăng như Me Girl hoặc Bandolini, Juno.</p>
-                    <br>
-                    <h4>MY HANH</h4>
-                </div>
-                <div>
-                    <i class="fa fa-quote-left fa-2x"></i>
-                    <br>
-                    <br>
-                    <p>Chúng tôi sẽ gợi ý cho bạn những món quà thật ý nghĩa để tặng người thân, bạn bè. Chúng tôi sẽ làm bạn hài lòng với sự lựa chọn của mình bằng giá tốt nhất và chất lượng dịch vụ hoàn hảo của chúng tôi.</p>
-                    <br>
-                    <h4>MY HANH</h4>
-                </div>
-                <div>
-                    <i class="fa fa-quote-left fa-2x"></i>
-                    <br>
-                    <br>
-                    <p>Bạn có thể mua sắm thoải mái mà không có bất kỳ lo lắng nào: trả hàng trong vòng 30 ngày kể từ ngày nhận hàng. Nếu bạn có bất kì câu hỏi nào về các sản phẩm của chúng tôi hãy gọi ngay tới bộ phận chăm sóc khách hàng.</p>
-                    <br>
-                    <h4>MY HANH</h4>
-                </div>
+    <div class="col-md-12">
+        <a href="#" ><img class="img-responsive" src="bootstrap/img/banner3.jpg" alt=""></a>
+    </div>
+    <div class="col-sm-12">
+        <center>
+            <p><strong>SẢN PHẨM</strong></P>
+            <H3><strong>--- SẢN PHẨM NỔI BẬT ---</strong></H3>
+        </center>
+
+    </div>
+    <div class="col-md-12">
+        <div id="mi-slider2" class="mi-slider">
+            <ul>
+                <li ng-repeat="vay in vay_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{vay.imageUrl}}" alt="img01"><h4>{{vay.vay}}<br>{{vay.price}}</h4></a></li>
+
+            </ul>
+            <ul>
+                <li ng-repeat="quan in quan_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{quan.imageUrl}}" alt="img05"><h4>{{quan.quan}}<br>{{quan.price}}</h4></a></li>
+
+            </ul>
+            <ul>
+                <li ng-repeat="pk in pk_mi_sliders"><a ui-sref="detail"><img class="img-responsive" ng-src="{{pk.imageUrl}}" alt="img09"><h4>{{pk.pk}}<br>{{pk.price}}</h4></a></li>
+            </ul>
+            <ul>
+                <li ng-repeat="giay in giay_mi_sliders" ><a ui-sref="detail"><img class="img-responsive" ng-src="{{giay.imageUrl}}" alt="img12"><h4>{{giay.giay}}<br>{{giay.price}}</h4></a></li>
+            </ul>
+            <nav>
+                <a href="#">Váy</a>
+                <a href="#">Quần</a>
+                <a href="#">Phụ kiện</a>
+                <a href="#">Giày</a>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="slider-intro">
+        <div class="regular1 slider">
+            <div>
+                <i class="fa fa-quote-left fa-2x"></i>
+                <br>
+                <br>
+                <p>Chúng tôi luôn cập nhật những xu hướng thời trang phong cách nhất từ những hãng thời trang cao cấp như Lime Orange hoặc Alachic, những đôi giày nổi tiếng mà giá cả phải chăng như Me Girl hoặc Bandolini, Juno.</p>
+                <br>
+                <h4>MY HANH</h4>
+            </div>
+            <div>
+                <i class="fa fa-quote-left fa-2x"></i>
+                <br>
+                <br>
+                <p>Chúng tôi sẽ gợi ý cho bạn những món quà thật ý nghĩa để tặng người thân, bạn bè. Chúng tôi sẽ làm bạn hài lòng với sự lựa chọn của mình bằng giá tốt nhất và chất lượng dịch vụ hoàn hảo của chúng tôi.</p>
+                <br>
+                <h4>MY HANH</h4>
+            </div>
+            <div>
+                <i class="fa fa-quote-left fa-2x"></i>
+                <br>
+                <br>
+                <p>Bạn có thể mua sắm thoải mái mà không có bất kỳ lo lắng nào: trả hàng trong vòng 30 ngày kể từ ngày nhận hàng. Nếu bạn có bất kì câu hỏi nào về các sản phẩm của chúng tôi hãy gọi ngay tới bộ phận chăm sóc khách hàng.</p>
+                <br>
+                <h4>MY HANH</h4>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="product" ng-controller="topCtrl">
-            <div  class="col-md-3 col-sm-6 col-xs-12">
-                <h3>SẢN PHẨM ĐỘC ĐÁO</h3>
-                <hr>
-                <div ng-repeat="t in top1 | orderBy:myOrderBy | filterFunction:search" class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h3>TOP ĐÁNH GIÁ</h3>
-                <hr>
-                <div ng-repeat="t in top2 | orderBy:myOrderBy | filterFunction:search" class="media">
-                    <div  class="media-left">
+</div>
+<div class="row">
+    <div class="product" ng-controller="topCtrl">
+        <div  class="col-md-3 col-sm-6 col-xs-12">
+            <h3>SẢN PHẨM ĐỘC ĐÁO</h3>
+            <hr>
+            <div ng-repeat="t in top1| orderBy:myOrderBy | filterFunction:search" class="media">
+                <div class="media-left">
+                    <a href="#">
                         <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
 
-                    </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h3>TOP XEM NHIỀU</h3>
-                <hr>
-                <div ng-repeat="t in top3 | orderBy:myOrderBy | filterFunction:search" class="media">
-                    <div  class="media-left">
-                        <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h3>TOP ĐÁNH GIÁ</h3>
+            <hr>
+            <div ng-repeat="t in top2| orderBy:myOrderBy | filterFunction:search" class="media">
+                <div  class="media-left">
+                    <img class="media-object" ng-src="{{t.imageUrl}}"/>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
 
-                    </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h3>BÁN CHẠY NHẤT</h3>
-                <hr>
-                 <div ng-repeat="t in top4 | orderBy:myOrderBy | filterFunction:search" class="media">
-                    <div  class="media-left">
-                        <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading"><a ui-sref="detail" >{{t.title_product}}</a></h4>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h3>TOP XEM NHIỀU</h3>
+            <hr>
+            <div ng-repeat="t in top3| orderBy:myOrderBy | filterFunction:search" class="media">
+                <div  class="media-left">
+                    <img class="media-object" ng-src="{{t.imageUrl}}"/>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
 
-                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h3>BÁN CHẠY NHẤT</h3>
+            <hr>
+            <div ng-repeat="t in top4| orderBy:myOrderBy | filterFunction:search" class="media">
+                <div  class="media-left">
+                    <img class="media-object" ng-src="{{t.imageUrl}}"/>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="row wapper_slider">
-        <hr>
-        <div class="regular slider">
-            <div ng-repeat="slider in regular_slider">
-                <img ng-src="{{slider.imageUrl}}" class="img-responsive">
-            </div>
+</div>
+<div class="row wapper_slider">
+    <hr>
+    <div class="regular slider">
+        <div ng-repeat="slider in regular_slider">
+            <img ng-src="{{slider.imageUrl}}" class="img-responsive">
         </div>
-        <hr>
     </div>
+    <hr>
+</div>
 <script>
-      	$(function() {
+    $(function () {
 
-                $( '#mi-slider' ).catslider();
-            });
-            $(function() {
+        $('#mi-slider').catslider();
+    });
+    $(function () {
 
-                $( '#mi-slider2' ).catslider();
-            });
+        $('#mi-slider2').catslider();
+    });
 </script>

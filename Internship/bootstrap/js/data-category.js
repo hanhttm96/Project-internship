@@ -125,11 +125,8 @@ var titles = [
             {id: 12, title_product: 'Váy Hoa Nữ A32-W122', price: '5.200.000₫', imageUrl: "bootstrap/img/sp1.jpeg"},
         ];
 
-
-
-
-
-var fashionApp = angular.module('fashionApp', ['ui.router']);
+//ui-router
+var fashionApp = angular.module('fashionApp', ['ui.router','ngDialog']);
 
 fashionApp.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -159,6 +156,8 @@ fashionApp.config(function ($stateProvider, $urlRouterProvider) {
     });
 
 });
+
+
 fashionApp.controller("homeController", homeController);
 fashionApp.controller("categoryController", categoryController);
 fashionApp.controller("contactController", contactController);
@@ -185,7 +184,8 @@ function detailController($scope, $timeout) {
          $scope.activeTab= key;
      }
 }
-function categoryController($scope, $timeout,$rootScope) {
+
+function categoryController($scope, $timeout,$rootScope, ngDialog) {
          $scope.products = products;
     $scope.trademarks = trademarks;
      $scope.prices = prices;
@@ -196,6 +196,10 @@ function categoryController($scope, $timeout,$rootScope) {
         console.log(value);
     });
     $scope.$on('destroy', test);
+     $scope.open= function () {
+        console.log("gsfs");
+        ngDialog.open({ template: 'bootstrap/popup/popupDetail.html', className: 'ngdialog-theme-default' });
+    };
 }
 function homeController($scope, $timeout) {
     var self = this;
@@ -235,7 +239,7 @@ function repeatCategory($scope, $rootScope) {
 }
 
 //Truyền data cho controller khac
-function menuCtrl($scope, $rootScope) {
+function menuCtrl($scope, $rootScope, ngDialog, $timeout) {
     $scope.search = '';
     $scope.openSearch = false;
     $scope.checkFilter = function (keyword) {
@@ -247,8 +251,13 @@ function menuCtrl($scope, $rootScope) {
         $scope.openSearch = !$scope.openSearch;
 
     }
-}
+    //popup
+     $scope.open= function () {
+        console.log("gsfs");
+        ngDialog.open({ template: 'bootstrap/popup/popupCart.html', className: 'ngdialog-theme-default' });
+    };
 
+}
 
 
 fashionApp.controller('namesCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {

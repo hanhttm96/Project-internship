@@ -1,6 +1,17 @@
-
-        <section class="cd-single-item container">
-            <div class="cd-slider-wrapper">
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <div class="cd-slider-wrapper">
                 <ul class="cd-slider">
                     <li class="selected"><img src="bootstrap/img/hover-sp3.jpeg" alt="Product Image 1"></li>
                     <li><img src="bootstrap/img/sp3.jpeg" alt="Product Image 1"></li>
@@ -22,8 +33,6 @@
                     <br>
                     <div class="g-plusone" data-annotation="inline" data-width="300"></div>
                 </div>
-
-                <p>Thiết kế nổi bật với túi viền da, kiểu dáng ôm sát, khoe đường cong và đôi chân thon dài Thiết kế nổi bật với túi viền...</p>
                 <div class="re-product">
                     <p>Còn hàng</p>
                 </div>
@@ -49,93 +58,7 @@
                 </form>
 
             </div>
-            <div class="option col-md-12">
-                <h3>THÔNG TIN</h3>
-                <hr>
-                <ul class="nav nav-tabs">
-                    <li ng-class="{'active': activeTab == 1}"><a data-toggle="tab" href="javascipt:void(0)" ng-click="changeData(1)">Giới thiệu</a></li>
-                    <li ng-class="{'active': activeTab == 2}"><a data-toggle="tab" href="javascipt:void(0)" ng-click="changeData(2)">Chính sách vận chuyển</a></li>
-                    <li ng-class="{'active': activeTab == 3}"><a data-toggle="tab" href="javascipt:void(0)" ng-click="changeData(3)">Nhận xét</a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div  class="tab-pane fade " ng-class="{'active': activeTab == 1}">
-                        <br>
-                        <p ng-repeat="info in infomation_prods">{{info.gioi_thieu}}<br></p>
-                    </div>
-                    <div class="tab-pane fade" ng-class="{'active': activeTab == 2}">
-                        <br>
-                        <p ng-repeat="policy in policys">{{policy.dieu}}<br></p>
-
-                    </div>
-                    <div  class="tab-pane fade" ng-class="{'active': activeTab == 3}">
-                        <div class="fb-comments" data-href="https://www.facebook.com/chau.xinh/?fref=ts" data-width="100%" data-numposts="5"></div>  
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-            <div class="row">
-                <div class="detail_product">
-                    <div  class="col-md-3 col-sm-6 col-xs-12">
-                        <h3>SẢN PHẨM ĐỘC ĐÁO</h3>
-                        <hr>
-                        <div ng-repeat="t in detail.top1" class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <h3>TOP ĐÁNH GIÁ</h3>
-                        <hr>
-                        <div ng-repeat="t in detail.top2" class="media">
-                            <div  class="media-left">
-                                <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <h3>TOP XEM NHIỀU</h3>
-                        <hr>
-                        <div ng-repeat="t in detail.top3" class="media">
-                            <div  class="media-left">
-                                <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <h3>BÁN CHẠY NHẤT</h3>
-                        <hr>
-                        <div ng-repeat="t in detail.top4" class="media">
-                            <div  class="media-left">
-                                <img class="media-object" ng-src="{{t.imageUrl}}"/>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a ui-sref="detail">{{t.title_product}}</a></h4>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!-- cd-single-item -->
-
-      
-
+            
         <script>
                     window.fbAsyncInit = function () {
                         FB.init({
@@ -173,7 +96,5 @@
                         lang: 'vi'
                     }
         </script>
-
-
-        
-    
+    </body>
+</html>

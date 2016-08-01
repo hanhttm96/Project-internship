@@ -19,7 +19,7 @@
                 </div>
                 <div class="product-wapper">
                     <h4>Loại sản phẩm</h4>
-                    <div class="product">
+                    <div class="typeProduct">
                         <a ui-sref="category" ng-repeat="product in products">{{product.prod}}<br><br></a>
 
                     </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="product-hot">
                     <h4>Bán chạy nhất</h4>
-                    <div class="product">
+                    <div class="typeProduct">
                         <div class="media">
                             <div class="media-left">
                                 <a ui-sref="detail">
@@ -94,25 +94,20 @@
                     <div ng-repeat="x in titles | orderBy:myOrderBy | filterFunction:test" ng-click="orderByMe('title_product')" class="col-md-3 border ">
                         <div  class="view_hover">
                             <img ng-src="{{x.imageUrl}}" class="img-responsive" alt="">
-
-                            <div class="quickview">
-                                <button id="{{x.id}}" type="button" class="quick-view btn btn-info btn-lg btn-outline" data-toggle="modal" data-target="#{{x.id}}"><i class="fa fa-eye"></i></button>
-                                <!-- Modal -->
-
-                            </div>
                             <div class="functional-buttons clearfix">
                                 <div class="cart">
                                     <div class="action">
                                         <form action="/cart/add" method="post" enctype="multipart/form-data" class="form-ajaxtocart" id="product-actions-1036138">
                                             <input type="hidden" name="id" value="1568530">
-                                            <a class="btn button ajax_addtocart" href="#" title="Váy 1 vai Skinny Jeans - PC41">
+                                            <a class="btn button ajax_addtocart" ui-sref="detail" title="Váy 1 vai Skinny Jeans - PC41">
                                                 <span class="select_options">Mua ngay</span>
                                             </a>
                                         </form> 
                                     </div> 
                                 </div>
                                 <div class="view_detail">
-                                    <a class="btn lnk_view" ui-sref="detail" title="View">
+                                    
+                                    <a class="btn lnk_view" ng-click="open()" href="javascript:void(0)" title="View">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
