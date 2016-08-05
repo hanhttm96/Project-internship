@@ -1,0 +1,27 @@
+<div class="wrap_checkout" ng-controller="repeatCategory">
+    <div class="col-md-4">
+        <p>THÔNG TIN MUA HÀNG</p>
+        <p><a href="javascript:void(0)">Đăng ký tài khoản mua hàng</a>/<a href="javascript:void(0)" >Đăng nhập</a></p>
+        <hr>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        <p>Thông tin thanh toán và nhận hàng</p>
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="Họ và Tên">
+        <input type="text" class="form-control" id="exampleInputPhone" placeholder="Số điện thoại">
+        <input type="text" class="form-control" id="exampleInputAddress" placeholder="Địa chỉ">
+        <select bind-event-change="billingProviceChange()" bind="BillingProvinceId" name="BillingProvinceId" class="form-control next-select">
+            <option selected="selected" value="1">Hà Nội</option>
+            <option ng-repeat="city in citys" value="{{city.value}}">{{city.name}}</option>
+        </select>
+        <select bind="BillingDistrictId" bind-event-change="billingDistrictChange()" name="BillingDistrictId" class="form-control next-select">
+            <option value="0">--- Chọn quận huyện ---</option>
+            <option ng-repeat="county in countys" value="{{county.value}}">{{county.name}}</option>
+        </select>    
+        <hr>
+        <textarea name="note" value="" class="form-control" placeholder="Ghi chú"></textarea>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4"></div>
+
+</div>

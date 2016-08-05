@@ -4,21 +4,168 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-         <div class="ngdialog-message">
-            <h3>Giỏ hàng</h3>
-            <p ng-show="theme">Test content for <code>{{theme}}</code></p>
-            <p ng-show="ngDialogId">Dialog Id: <code>{{ngDialogId}}</code></p>
-            <p class="data-passed-through" ng-show="ngDialogData.foo">Data passed through: <code>{{ngDialogData.foo}}</code></p>
-            <p ng-show="dialogModel.message">Scope passed through: <code>{{dialogModel.message}}</code></p>
-            <p>Close this dialog: <button class="inline close-this-dialog" ng-click="closeThisDialog()">Close</button></p>
 
-        </div>
-    </body>
-</html>
+<div class="ngdialog-message" ng-controller="repeatCategory"> 
+    <div id="cart-page">
+
+<!--        <form action="#" method="post" novalidate="" class="cart">-->
+            <h1 class="page-header">Giỏ hàng</h1>
+            <div class="page-content">
+                <div class="cart_header_labels clearfix">
+                    <div class="label_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cart_product first_item">
+                            Sản phẩm
+                        </div>
+                    </div>
+                    <div class="label_item col-xs-12 col-sm-3 col-md-3">
+                        <div class="cart_description item">
+                            Mô tả
+                        </div>
+                    </div>
+                    <div class="label_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cart_price item">
+                            Giá
+                        </div>
+                    </div>
+                    <div class="label_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cart_quantity item">
+                            Số lượng
+                        </div>
+                    </div>
+                    <div class="label_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cart_total item">
+                            Tổng
+                        </div>
+                    </div>
+                    <div class="label_item col-xs-12 col-sm-1 col-md-1">
+                        <div class="cart_delete last_item">
+                            Xóa
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list_product_cart clearfix" data-id="706985">
+
+                    <div class="cpro_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner text-center">
+                            <a href="#" class="cart__image">
+
+                                <img width="75" height="75" alt="Áo dài tay Jones New York" src="//bizweb.dktcdn.net/thumb/small/100/038/402/products/k13-01-1-1-large.jpeg?v=1453553486427">
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-3 col-md-3">
+                        <div class="cpro_item_inner">
+                            <a href="/vong-tay-jones-new-york?variantid=1568548" class="product_name">
+                                Áo dài tay Jones New York
+                            </a>
+
+
+                            <p>Jones New York</p>
+
+
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner">
+                            <span class="price product-price">690.000₫</span>
+                        </div>
+                    </div>
+                    <div class="cpro_item text-center col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner">
+                            <div class="js-qty">												
+                                <input min="1" type="number" id="quantity1" name="quantity" value="1" class="form-control input-small quantity">                                       
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner">
+                            <span class="price product-price">690.000₫</span>
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-1 col-md-1">
+                        <div class="cpro_item_inner">
+                            <a href="javascipt:void(0)" class="cart__remove" data-id="706985">
+                                <small>Xóa</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list_product_cart clearfix" data-id="706991">
+
+                    <div class="cpro_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner text-center">
+                            <a href="javascipt:void(0)" class="cart__image">
+
+                                <img width="75" height="75" alt="Váy skinny túi viền da - UC25" src="//bizweb.dktcdn.net/thumb/small/100/038/402/products/k4-01-large.jpeg?v=1453552373827">
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-3 col-md-3">
+                        <div class="cpro_item_inner">
+                            <a href="javascipt:void(0)" class="product_name">
+                                Váy skinny túi viền da - UC25
+                            </a>
+                            <small>Đen / X</small>
+                            <p>Spanx</p>
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner">
+                            <span class="price product-price">5.200.000₫</span>
+                        </div>
+                    </div>
+                    <div class="cpro_item text-center col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner">
+                            <div class="js-qty">												
+                                <input min="1" type="number" id="quantity1" name="quantity" value="1" class="form-control input-small quantity">                                       				
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-2 col-md-2">
+                        <div class="cpro_item_inner">
+                            <span class="price product-price">5.200.000₫</span>
+                        </div>
+                    </div>
+                    <div class="cpro_item col-xs-12 col-sm-1 col-md-1">
+                        <div class="cpro_item_inner">
+                            <a href="javascipt:void(0)" class="cart__remove" data-id="706991">
+                                <small>Xóa</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_button_cart clearfix">
+                    <div class="note_item col-xs-12 col-sm-6 col-md-6">
+                        <div class="note_cart">
+                            <label class="control-label" for="CartSpecialInstructions">Hướng dẫn đặc biệt cho người bán</label>
+                            <textarea name="note" class="form-control" id="CartSpecialInstructions"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 text-right">
+                        <p>
+                            <span class="cart__subtotal-title">Tổng cộng</span>
+                            <span class="h3 cart__subtotal">7.960.000₫</span>
+                        </p>
+                        <p><em>Vận chuyển và thuế</em></p>
+                        <div class="col-md-6">
+                            <input type="submit" name="update" class="btn btn-outline " value="Cập nhật giỏ hàng">
+                        </div>
+                        <div class="col-md-6">
+                            <a class="checkout" ui-sref="checkout" ng-click="closeThisDialog()"><button class="btn btn-outline"  title="Tiến hành thanh toán" type="button" ><span>Tiến hành thanh toán</span></a>
+                        </div>
+                        
+                    </div>
+                     <a ui-sref="category" ng-click="closeThisDialog()"><button class="btn btn-outline" type="button" title="Tiếp tục mua hàng"><span>Tiếp tục mua hàng</span></button></a>
+                </div>
+            </div>
+<!--        </form>-->
+        
+    </div>
+</div>
+<script>
+    
+</script>

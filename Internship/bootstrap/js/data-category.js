@@ -89,44 +89,96 @@ var policys = [
     {dieu: '7. Trường hợp không tồn tại người nhận tại địa chỉ yêu cầu: đơn hàng sẽ được hủy và không được hoàn lại thanh toán.'},
     {dieu: '8. Chúng tôi không vận chuyển sản phẩm đến các địa chỉ trên tàu hỏa, máy bay, tàu thủy, khu vực nguy hiểm, các khu vực cấm…'},
 ];
- var top1= [
-            {id: 1, title_product: 'Áo Len Ren Skinny...', imageUrl: "bootstrap/img/sp3.jpeg", },
-            {id: 2, title_product: 'Váy Hoa Nữ A32-W122', imageUrl: "bootstrap/img/sp5.jpeg"},
-            {id: 3, title_product: 'Váy Ren Tommy Hilfiger', imageUrl: "bootstrap/img/sp2.jpeg"},
-        ];
- var top2= [
-            {id: 4, title_product: 'Chân Váy Chữ A...', imageUrl: "bootstrap/img/sp8.jpeg"},
-            {id: 5, title_product: 'Váy 1 Vai Skinny...', imageUrl: "bootstrap/img/sp9.jpeg"},
-            {id: 6, title_product: 'Váy Hoa Nữ A32-W122', imageUrl: "bootstrap/img/sp1.jpeg"},
-        ];
+var top1 = [
+    {id: 1, title_product: 'Áo Len Ren Skinny...', imageUrl: "bootstrap/img/sp3.jpeg", },
+    {id: 2, title_product: 'Váy Hoa Nữ A32-W122', imageUrl: "bootstrap/img/sp5.jpeg"},
+    {id: 3, title_product: 'Váy Ren Tommy Hilfiger', imageUrl: "bootstrap/img/sp2.jpeg"},
+];
+var top2 = [
+    {id: 4, title_product: 'Chân Váy Chữ A...', imageUrl: "bootstrap/img/sp8.jpeg"},
+    {id: 5, title_product: 'Váy 1 Vai Skinny...', imageUrl: "bootstrap/img/sp9.jpeg"},
+    {id: 6, title_product: 'Váy Hoa Nữ A32-W122', imageUrl: "bootstrap/img/sp1.jpeg"},
+];
 var top3 = [
-            {id: 7, title_product: 'Đầm Xòe Michael Kors', imageUrl: "bootstrap/img/sp4.jpeg"},
-            {id: 8, title_product: 'Váy Ren Tommy Hilfiger', imageUrl: "bootstrap/img/sp5.jpeg"},
-            {id: 9, title_product: 'Váy Skinny Túi Viền...', imageUrl: "bootstrap/img/sp3.jpeg"},
-        ];
+    {id: 7, title_product: 'Đầm Xòe Michael Kors', imageUrl: "bootstrap/img/sp4.jpeg"},
+    {id: 8, title_product: 'Váy Ren Tommy Hilfiger', imageUrl: "bootstrap/img/sp5.jpeg"},
+    {id: 9, title_product: 'Váy Skinny Túi Viền...', imageUrl: "bootstrap/img/sp3.jpeg"},
+];
 var top4 = [
-            {id: 10, title_product: 'Váy Ren Tommy Hilfiger', imageUrl: "bootstrap/img/sp2.jpeg"},
-            {id: 11, title_product: 'Áo Len Ren Skinny...', imageUrl: "bootstrap/img/sp9.jpeg"},
-            {id: 12, title_product: 'Váy Hoa Nữ A32-W122', imageUrl: "bootstrap/img/sp1.jpeg"},
-        ];
+    {id: 10, title_product: 'Váy Ren Tommy Hilfiger', imageUrl: "bootstrap/img/sp2.jpeg"},
+    {id: 11, title_product: 'Áo Len Ren Skinny...', imageUrl: "bootstrap/img/sp9.jpeg"},
+    {id: 12, title_product: 'Váy Hoa Nữ A32-W122', imageUrl: "bootstrap/img/sp1.jpeg"},
+];
 
 var titles = [
-            {id: 1, title_product: 'Áo Len Ren Skinny...', price: '740.000₫', imageUrl: "bootstrap/img/sp3.jpeg"},
-            {id: 2, title_product: 'Váy Hoa Nữ A32-W122', price: '5.200.000₫', imageUrl: "bootstrap/img/sp5.jpeg"},
-            {id: 3, title_product: 'Váy Ren Tommy Hilfiger', price: '11.500.000₫', imageUrl: "bootstrap/img/sp2.jpeg"},
-            {id: 4, title_product: 'Chân Váy Chữ A...', price: '9.800.000₫', imageUrl: "bootstrap/img/sp8.jpeg"},
-            {id: 5, title_product: 'Váy 1 Vai Skinny...', price: '2.500.000₫', imageUrl: "bootstrap/img/sp9.jpeg"},
-            {id: 6, title_product: 'Váy Hoa Nữ A32-W122', price: '5.200.000₫', imageUrl: "bootstrap/img/sp1.jpeg"},
-            {id: 7, title_product: 'Đầm Xòe Michael Kors', price: '8.600.000₫', imageUrl: "bootstrap/img/sp4.jpeg"},
-            {id: 8, title_product: 'Váy Ren Tommy Hilfiger', price: '11.500.000₫', imageUrl: "bootstrap/img/sp5.jpeg"},
-            {id: 9, title_product: 'Váy Skinny Túi Viền...', price: '5.200.000₫', imageUrl: "bootstrap/img/sp3.jpeg"},
-            {id: 10, title_product: 'Váy Ren Tommy Hilfiger', price: '11.500.000₫', imageUrl: "bootstrap/img/sp2.jpeg"},
-            {id: 11, title_product: 'Áo Len Ren Skinny...', price: '740.000₫', imageUrl: "bootstrap/img/sp9.jpeg"},
-            {id: 12, title_product: 'Váy Hoa Nữ A32-W122', price: '5.200.000₫', imageUrl: "bootstrap/img/sp1.jpeg"},
-        ];
-
+    {id: 1, title_product: 'Áo Len Ren Skinny...', price: '740.000₫', imageUrl: "bootstrap/img/sp3.jpeg"},
+    {id: 2, title_product: 'Váy Hoa Nữ A32-W122', price: '5.200.000₫', imageUrl: "bootstrap/img/sp5.jpeg"},
+    {id: 3, title_product: 'Váy Ren Tommy Hilfiger', price: '11.500.000₫', imageUrl: "bootstrap/img/sp2.jpeg"},
+    {id: 4, title_product: 'Chân Váy Chữ A...', price: '9.800.000₫', imageUrl: "bootstrap/img/sp8.jpeg"},
+    {id: 5, title_product: 'Váy 1 Vai Skinny...', price: '2.500.000₫', imageUrl: "bootstrap/img/sp9.jpeg"},
+    {id: 6, title_product: 'Váy Hoa Nữ A32-W122', price: '5.200.000₫', imageUrl: "bootstrap/img/sp1.jpeg"},
+    {id: 7, title_product: 'Đầm Xòe Michael Kors', price: '8.600.000₫', imageUrl: "bootstrap/img/sp4.jpeg"},
+    {id: 8, title_product: 'Váy Ren Tommy Hilfiger', price: '11.500.000₫', imageUrl: "bootstrap/img/sp5.jpeg"},
+    {id: 9, title_product: 'Váy Skinny Túi Viền...', price: '5.200.000₫', imageUrl: "bootstrap/img/sp3.jpeg"},
+    {id: 10, title_product: 'Váy Ren Tommy Hilfiger', price: '11.500.000₫', imageUrl: "bootstrap/img/sp2.jpeg"},
+    {id: 11, title_product: 'Áo Len Ren Skinny...', price: '740.000₫', imageUrl: "bootstrap/img/sp9.jpeg"},
+    {id: 12, title_product: 'Váy Hoa Nữ A32-W122', price: '5.200.000₫', imageUrl: "bootstrap/img/sp1.jpeg"},
+];
+var citys = [
+    {value: 2, name: "TP Hồ Chí Minh"},
+    {value: 3, name: "An Giang"},
+    {value: 4, name: "Bà Rịa-Vũng Tàu"},
+    {value: 5, name: "Bắc Giang"},
+    {value: 6, name: "Bắc Kạn"},
+    {value: 7, name: "Bạc Liêu"},
+    {value: 8, name: "Bắc Ninh"},
+    {value: 9, name: "Bến Tre"},
+    {value: 10, name: "Bình Định"},
+    {value: 11, name: "Bình Dương"},
+    {value: 12, name: "Bình Phước"},
+    {value: 13, name: "Bình Thuận"},
+    {value: 14, name: "Cà Mau"},
+    {value: 15, name: "Cần Thơ"},
+    {value: 16, name: "Cao Bằng"},
+    {value: 17, name: "Đà Nẵng"},
+    {value: 18, name: "Đắk Lắk"},
+    {value: 19, name: "Đắk Nông"},
+    {value: 20, name: "Điện Biên"},
+    {value: 21, name: "Đồng Nai"},
+    {value: 22, name: "Đồng Tháp"},
+    {value: 23, name: "Gia Lai"},
+    {value: 24, name: "Hà Giang"},
+    
+];
+var countys = [
+    {value: 1, name: "Quận Hoàn Kiếm"},
+    {value: 2, name: "Quận Ba Đình"},
+    {value: 3, name: "Quận Cầu Giấy"},
+    {value: 4, name: "Quận Đống Đa"},
+    {value: 5, name: "Quận Hai Bà Trưng"},
+    {value: 6, name: "Quận Thanh Xuân"},
+    {value: 7, name: "Quận Hoàng Mai"},
+    {value: 8, name: "Quận Long Biên"},
+    {value: 9, name: "Quận Tây Hồ"},
+    {value: 10, name: "Thị xã Sơn Tây"},
+    {value: 11, name: "Huyện Ba Vì"},
+    {value: 12, name: "Huyện Chương Mỹ"},
+    {value: 13, name: "Huyện Đan Phượng"},
+    {value: 14, name: "Huyện Đông Anh"},
+    {value: 15, name: "Huyện Gia Lâm"},
+    {value: 16, name: "Huyện Hoài Đức"},
+    {value: 17, name: "Huyện Mê Linh"},
+    {value: 18, name: "Huyện Mỹ Đức"},
+    {value: 19, name: "Huyện Phú Xuyên"},
+    {value: 20, name: "Huyện Phúc Thọ"},
+    {value: 21, name: "Huyện Quốc Oai"},
+    {value: 22, name: "Huyện Sóc Sơn"},
+    {value: 23, name: "Huyện Thạch Thất"},
+    {value: 24, name: "Huyện Thanh Oai"},
+    
+];
 //ui-router
-var fashionApp = angular.module('fashionApp', ['ui.router','ngDialog']);
+var fashionApp = angular.module('fashionApp', ['ui.router', 'ngDialog']);
 
 fashionApp.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -134,34 +186,45 @@ fashionApp.config(function ($stateProvider, $urlRouterProvider) {
     //
     // Now set up the states
     $stateProvider
-    .state('home', {
-        url: "/",
-        templateUrl: "template/main.html",
-        controller: 'homeController as home'
-    })
-    .state('category', {
-        url: "/category",
-        templateUrl: "template/category.html",
-        controller: 'categoryController'
-    })
-    .state('contact', {
-        url: "/contact",
-        templateUrl: "template/contact.html",
-        controller: 'contactController as contact'
-    })
-    .state('detail', {
-        url: "/detail",
-        templateUrl: "template/detail.html",
-        controller: 'detailController as detail'
-    });
+            .state('home', {
+                url: "/",
+                templateUrl: "template/main.html",
+                controller: 'homeController as home'
+            })
+            .state('category', {
+                url: "/category",
+                templateUrl: "template/category.html",
+                controller: 'categoryController'
+            })
+            .state('contact', {
+                url: "/contact",
+                templateUrl: "template/contact.html",
+                controller: 'contactController as contact'
+            })
+            .state('detail', {
+                url: "/detail",
+                templateUrl: "template/detail.html",
+                controller: 'detailController as detail'
+            })
+            .state('checkout', {
+                url: "/checkout",
+                templateUrl: "template/checkout.html",
+                controller: 'checkoutController as checkout'
+            });
 
 });
-
 
 fashionApp.controller("homeController", homeController);
 fashionApp.controller("categoryController", categoryController);
 fashionApp.controller("contactController", contactController);
 fashionApp.controller("detailController", detailController);
+fashionApp.controller("checkoutController", checkoutController);
+
+function checkoutController($scope, $timeout) {
+    var self = this;
+    $scope.citys = citys;
+    $scope.countys = countys;
+}
 function contactController($scope, $timeout) {
     var self = this;
 }
@@ -176,35 +239,36 @@ function detailController($scope, $timeout) {
     console.log(self.top2)
     console.log(self.top4)
     console.log(self.top3)
-     $scope.infomation_prods = infomation_prods;
-     $scope.policys = policys;
-     console.log($scope.policys)
-     $scope.activeTab=1;
-     $scope.changeData= function(key){
-         $scope.activeTab= key;
-     }
+    $scope.infomation_prods = infomation_prods;
+    $scope.policys = policys;
+    console.log($scope.policys)
+    $scope.activeTab = 1;
+    $scope.changeData = function (key) {
+        $scope.activeTab = key;
+    }
 }
 
-function categoryController($scope, $timeout,$rootScope, ngDialog) {
-         $scope.products = products;
+function categoryController($scope, $timeout, $rootScope, ngDialog) {
+    $scope.products = products;
     $scope.trademarks = trademarks;
-     $scope.prices = prices;
-     $scope.titles=titles;
-      $scope.test = '';
+    $scope.prices = prices;
+    $scope.titles = titles;
+    $scope.citys = citys;
+    $scope.test = '';
     var test = $rootScope.$on('dataFilter', function (e, value) {
         $scope.test = value;
         console.log(value);
     });
     $scope.$on('destroy', test);
-     $scope.open= function () {
+    $scope.open = function () {
         console.log("gsfs");
-        ngDialog.open({ template: 'bootstrap/popup/popupDetail.html', className: 'ngdialog-theme-default' });
+        ngDialog.open({template: 'bootstrap/popup/popupDetail.html', className: 'ngdialog-theme-default'});
     };
 }
 function homeController($scope, $timeout) {
     var self = this;
-    
-    $timeout(function(){
+
+    $timeout(function () {
         $(".regular").slick({
             dots: false,
             infinite: true,
@@ -212,15 +276,15 @@ function homeController($scope, $timeout) {
             slidesToScroll: 3
         });
         $('.regular1').slick();
-    },1000);
-    
+    }, 1000);
+
 }
 
 fashionApp.controller("menuCtrl", menuCtrl);
 fashionApp.controller("repeatCategory", repeatCategory);
 function repeatCategory($scope, $rootScope) {
 
-   
+
     $scope.prod_new_left = prod_new_left;
     $scope.prod_new_right = prod_new_right;
     $scope.regular_slider = regular_slider;
@@ -230,11 +294,11 @@ function repeatCategory($scope, $rootScope) {
     $scope.giay_mi_sliders = giay_mi_sliders;
     $scope.footers = footers;
     $scope.contacts = contacts;
-    
+
 
 
     //Nhan data tu controller tren
-   
+
 
 }
 
@@ -252,9 +316,9 @@ function menuCtrl($scope, $rootScope, ngDialog, $timeout) {
 
     }
     //popup
-     $scope.open= function () {
+    $scope.open = function () {
         console.log("gsfs");
-        ngDialog.open({ template: 'bootstrap/popup/popupCart.html', className: 'ngdialog-theme-default' });
+        ngDialog.open({template: 'bootstrap/popup/popupCart.html', className: 'ngdialog-theme-default'});
     };
 
 }
@@ -274,10 +338,10 @@ fashionApp.controller('namesCtrl', ['$scope', '$rootScope', function ($scope, $r
     }]);
 
 fashionApp.controller('topCtrl', ['$scope', function ($scope) {
-       $scope.top1 = top1;
-       $scope.top2 = top2;
-       $scope.top3 = top3;
-       $scope.top4 = top4;
+        $scope.top1 = top1;
+        $scope.top2 = top2;
+        $scope.top3 = top3;
+        $scope.top4 = top4;
         $scope.orderByMe = function (x) {
             $scope.myOrderBy = x;
         }
