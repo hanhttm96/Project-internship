@@ -20,8 +20,118 @@
         <textarea name="note" value="" class="form-control" placeholder="Ghi chú"></textarea>
     </div>
     <div class="col-md-4">
+        <div class="next-select__wrapper">
+            <select bind-event-change="changeShippingMethod()" name="ShippingMethod" bind="shippingMethod" class="form-control next-select">
+                <option fee="40000" value="42735,0">Giao hàng tận nơi - 40.000₫</option>
+            </select>
 
+        </div>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="order-summary order-summary--custom-background-color ">
+            <div class="order-summary-header summary-header--thin summary-header--border">
+                <p>
+                    <label class="control-label">Đơn hàng</label>
+                    <label class="control-label hidden-md hidden-lg">(5)</label>
+                </p>
+                <a class="underline-none expandable expandable--pull-right mobile" bind-event-click="toggle(this, '.order-items')" bind-class="{open: order_expand}" href="javascript:void(0)">
+                    Xem chi tiết
+                </a>
+            </div>
+            <div class="order-items mobile--is-collapsed" bind-class="{'mobile--is-collapsed': !order_expand}">
+                <div class="summary-body summary-section summary-product">
+                    <div class="summary-product-list">
+                        <ul class="product-list">
+
+                            <li class="product product-has-image clearfix">
+                                <div class="product-thumbnail pull-left">
+                                    <div class="product-thumbnail__wrapper">
+
+                                        <img src="//bizweb.dktcdn.net/thumb/thumb/100/038/402/products/k13-01-1-1-large.jpeg?v=1453553486427" alt="Áo dài tay Jones New York" class="product-thumbnail__image">
+
+                                    </div>
+                                    <span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+                                </div>
+                                <div class="product-info pull-left">
+                                    <span class="product-info-name">
+                                        <strong>Áo dài tay Jones New York</strong>
+                                    </span>
+
+
+                                </div>
+                                <strong class="product-price pull-right">
+                                    609.000₫
+                                </strong>
+                               
+                            </li>
+
+                            <li class="product product-has-image clearfix">
+                                <div class="product-thumbnail pull-left">
+                                    <div class="product-thumbnail__wrapper">
+
+                                        <img src="//bizweb.dktcdn.net/thumb/thumb/100/038/402/products/k4-01-large.jpeg?v=1453552373827" alt="Váy skinny túi viền da - UC25 - Đen / X" class="product-thumbnail__image">
+
+                                    </div>
+                                    <span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+                                </div>
+                                <div class="product-info pull-left">
+                                    <span class="product-info-name">
+                                        <strong>Váy skinny túi viền da - UC25</strong>
+                                    </span>
+                                </div>
+                                <strong class="product-price pull-right">
+                                    5.200.000₫
+                                </strong>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div define="{showDiscountTextBox: false}" class="summary-section">
+                    <a bind-event-click="showDiscountTextBox =!showDiscountTextBox" bind-show="!showDiscountTextBox &amp;&amp; (!existCode ||code == null || !code.length)" class="more hide" href="javascript:void(0)">Nhập mã giảm giá</a>
+                    <div bind-show="showDiscountTextBox &amp;&amp; (!existCode ||code == null || !code.length)" class="form-group m0">
+                        <div class="input-group">
+                            <input bind="code" name="code" type="text" class="form-control" placeholder="Nhập mã giảm giá">
+                            <span class="input-group-btn">
+                                <button bind-event-click="caculateShippingFee()" class="btn btn-primary event-voucher-apply" type="button">Áp dụng</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div bind-class="{'warning' : existCode &amp;&amp; !freeShipping &amp;&amp; discount == 0,'success' : existCode &amp;&amp; ( freeShipping || discount >0 )}" class="clearfix hide" bind-show="code!= null &amp;&amp; code.length &amp;&amp; existCode">
+                        <div class="pull-left">
+                            <i class="applied-discount-status"></i>
+                        </div>
+                        <div bind="code" class="pull-left applied-discount-code"></div>
+                    </div>
+                    <div class="error mt10" bind-show="inValidCode">
+                        Mã khuyễn mãi không hợp lệ
+                    </div>
+                </div>
+            </div>
+            <div class="summary-section border-top-none--mobile">
+                <div class="total-line total-line-subtotal clearfix">
+                    <span class="total-line-name pull-left">
+                        Tạm tính
+                    </span>
+                    <span  class="total-line-subprice pull-right">5.809.000₫</span>
+                </div>
+                <div class="total-line total-line-shipping clearfix" bind-show="requiresShipping">
+                    <span class="total-line-name pull-left">
+                        Phí vận chuyển
+                    </span>
+                    <span  class="total-line-shipping pull-right">40.000₫</span>
+                </div>
+                <div class="total-line total-line-total clearfix">
+                    <span class="total-line-name pull-left">
+                        Tổng cộng
+                    </span>
+                    <span class="total-line-price pull-right">5.849.000₫</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group clearfix hidden-sm hidden-xs">
+            <input class="btn btn-primary col-md-12 mt10 btn-checkout" type="button" bind-event-click="paymentCheckout()" value="ĐẶT HÀNG">
+        </div>
+    </div>
 
 </div>

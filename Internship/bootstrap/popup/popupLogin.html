@@ -1,0 +1,92 @@
+<div class="form">
+    <div class="row container">
+        <div class="col-md-12">
+            <div class="panel panel-login">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#" class="active" id="login-form-link">Đăng nhập</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#" id="register-form-link">Đăng ký</a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>
+                                <a href="#" class="btn btn-social btn-facebook">
+                                    <i class="fa fa-facebook"></i>&nbsp; Facebook</a>
+                                <a href="#" class="btn btn-social btn-google">
+                                    <i class="fa fa-google-plus"></i>&nbsp; Google</a>
+                            </p>
+                            <form id="login-form" action="" method="post" role="form" style="display: block;">
+                                <div class="form-group">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="form-group text-center">
+                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                    <label for="remember"> Nhớ mật khẩu</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Gửi">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <a href="" tabindex="5" class="forgot-password">Quên password?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div ng-controller="AppController as ctrl">
+                                <form ng-submit="ctrl.submit()" name="myForm" id="register-form" style="display: none;">
+                                    <input type="hidden" ng-model="ctrl.user.id" />
+
+                                    <div class="form-group">
+                                        <input ng-model="ctrl.user.username" type="text" name="username" id="username" tabindex="1" class="username form-control input-sm" placeholder="Nhập tên ít nhất 2 ký tự" required ng-minlength="2">
+                                        <div class="has-error" ng-show="myForm.$dirty">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="ctrl.user.email" type="email" name="email" id="email" tabindex="1" class="email form-control input-sm" placeholder="Địa chỉ Email" required>
+                                        <div class="has-error" ng-show="myForm.$dirty">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="ctrl.user.password" type="password" name="password" id="password" tabindex="2" class="password form-control input-sm" placeholder="Mật khẩu ít nhất 5 ký tự" required ng-minlength="5">
+                                        <div class="has-error" ng-show="myForm.$dirty">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="form-actions floatRight">
+                                                <div class="col-md-6">
+                                                    <input type="submit"  value="{{!ctrl.user.id ? 'Gửi' : 'Update'}}" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Xóa form</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

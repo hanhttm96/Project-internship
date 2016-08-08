@@ -235,10 +235,6 @@ function detailController($scope, $timeout) {
     self.top2 = top2;
     self.top3 = top3;
     self.top4 = top4;
-    console.log(self.top1)
-    console.log(self.top2)
-    console.log(self.top4)
-    console.log(self.top3)
     $scope.infomation_prods = infomation_prods;
     $scope.policys = policys;
     console.log($scope.policys)
@@ -332,7 +328,6 @@ fashionApp.controller('namesCtrl', ['$scope', '$rootScope', function ($scope, $r
         $scope.test = '';
         var test = $rootScope.$on('dataFilter', function (e, value) {
             $scope.test = value;
-            console.log('nhan', value);
         });
         $scope.$on('destroy', test);
     }]);
