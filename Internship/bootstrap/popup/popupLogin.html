@@ -5,10 +5,10 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-6">
-                            <a href="#" class="active" id="login-form-link">Đăng nhập</a>
+                            <a href="#" ng-class="{'active':currentTab=='login'}" ng-click="changeTab('login')">Đăng nhập</a>
                         </div>
                         <div class="col-xs-6">
-                            <a href="#" id="register-form-link">Đăng ký</a>
+                            <a href="#" ng-class="{'active':currentTab=='register'}" ng-click="changeTab('register')">Đăng ký</a>
                         </div>
                     </div>
                     <hr>
@@ -22,7 +22,7 @@
                                 <a href="#" class="btn btn-social btn-google">
                                     <i class="fa fa-google-plus"></i>&nbsp; Google</a>
                             </p>
-                            <form id="login-form" action="" method="post" role="form" style="display: block;">
+                            <form id="login-form" action="" method="post" role="form" ng-if="currentTab=='login'">
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                 </div>
@@ -50,22 +50,22 @@
                                     </div>
                                 </div>
                             </form>
-                            <div ng-controller="AppController as ctrl">
-                                <form ng-submit="ctrl.submit()" name="myForm" id="register-form" style="display: none;">
-                                    <input type="hidden" ng-model="ctrl.user.id" />
+                            <div>
+                                <form ng-submit="submit()" name="myForm" id="register-form" ng-if="currentTab=='register'">
+                                    <input type="hidden" ng-model="user.id" />
 
                                     <div class="form-group">
-                                        <input ng-model="ctrl.user.username" type="text" name="username" id="username" tabindex="1" class="username form-control input-sm" placeholder="Nhập tên ít nhất 2 ký tự" required ng-minlength="2">
+                                        <input ng-model="user.username" type="text" name="username" id="username" tabindex="1" class="username form-control input-sm" placeholder="Nhập tên ít nhất 2 ký tự" required ng-minlength="2">
                                         <div class="has-error" ng-show="myForm.$dirty">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input ng-model="ctrl.user.email" type="email" name="email" id="email" tabindex="1" class="email form-control input-sm" placeholder="Địa chỉ Email" required>
+                                        <input ng-model="user.email" type="email" name="email" id="email" tabindex="1" class="email form-control input-sm" placeholder="Địa chỉ Email" required>
                                         <div class="has-error" ng-show="myForm.$dirty">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input ng-model="ctrl.user.password" type="password" name="password" id="password" tabindex="2" class="password form-control input-sm" placeholder="Mật khẩu ít nhất 5 ký tự" required ng-minlength="5">
+                                        <input ng-model="user.password" type="password" name="password" id="password" tabindex="2" class="password form-control input-sm" placeholder="Mật khẩu ít nhất 5 ký tự" required ng-minlength="5">
                                         <div class="has-error" ng-show="myForm.$dirty">
                                         </div>
                                     </div>
