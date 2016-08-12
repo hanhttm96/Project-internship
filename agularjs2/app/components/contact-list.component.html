@@ -1,0 +1,23 @@
+<!-- Contact list template -->
+<ul class="contact-items">
+	<li *ngFor="let contact of contacts | search:searchItem">
+		<div class="contact-icon pull-left">
+			<span class="user-image fa fa-user">
+			</span>
+		</div>
+		<div class="contact-info pull-left">
+			<p class="contact-name">
+				{{contact.name}}
+			</p>
+			<p class="contact-number">
+				{{contact.phone}}
+			</p>
+		</div>
+		<div class="contact-action pull-left">
+			<span class="edit-icon fa fa-pencil" (click)="onSelect(contact)">
+			</span>
+			<span class="remove-icon fa fa-trash" (click)="removeContact(contact)">
+			</span>
+		</div>
+	</li>
+</ul>

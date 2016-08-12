@@ -1,0 +1,88 @@
+.col-centered {
+	float: none;
+	margin: auto;
+}
+.contact-header {
+	background-color: #3F51B5;
+	color: #fff;
+	height: 3.750em;
+}
+.contact-icon-admin {
+	width: 3.750em;
+	height: 3.750em;
+	margin: 0 10px;
+	padding: 2px 0;
+}
+.contact-info-admin {
+	padding: 5px 0;
+}
+.contact-info-admin p {
+	margin-bottom: 0;
+}
+.contact-info-admin p a {
+	color: #fff;
+}
+.contact-list input {
+	border-radius: 0;
+	border-top: none;
+}
+.contact-list button {
+	border-radius: 0;
+	margin: 2% 2.5%;
+	width: 44%;
+}
+.contact-items {
+	list-style-type: none;
+	padding-left: 0;
+	display: inline-block;
+	width: 100%;
+}
+.contact-icon {
+	width: 15%;
+	padding: 2% 2.5%;
+}
+.contact-icon .user-image {
+	font-size: 3em;
+}
+.contact-info {
+	width: 55%;
+	padding: 5px 0;
+}
+.contact-info p {
+	font-size: 1.025em;
+	margin-bottom: 0px;
+}
+.contact-info .contact-name {
+	font-size: 1.25em;
+	font-style: italic;
+}
+.contact-action {
+	width: 30%;
+	position: relative;
+	text-align: right;
+	padding-top: 9.5px;
+	padding-right: 15px;
+}
+.latest-group {
+	border: 1px solid #ccc;
+	border-top: none;
+	display: inline-block;
+	width: 100%;
+}
+.edit-icon, .remove-icon {
+	font-size: 1.5em;
+	padding: 5px;
+}
+.contact-items li {
+	border: 1px solid #ccc;
+	display: inline-block;
+	width: 100%;
+	float: left;
+	border-top: none;
+}
+.contact-form .form-group {
+	margin-bottom: 0;
+}
+.contact-form form {
+	margin-bottom: 0;
+}
